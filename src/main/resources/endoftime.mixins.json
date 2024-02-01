@@ -1,0 +1,14 @@
+{
+	"required": true,
+	"package": "net.prangellplays.endoftime.mixin",
+	"compatibilityLevel": "JAVA_17",
+	"mixins": [
+      	"EndOfTimeMixin",
+		"ItemRendererAccessor",
+		"ItemRendererMixin",
+		"ModelLoaderMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}
