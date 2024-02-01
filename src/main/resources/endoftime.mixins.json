@@ -6,7 +6,10 @@
       	"EndOfTimeMixin",
 		"ItemRendererAccessor",
 		"ItemRendererMixin",
-		"ModelLoaderMixin"
+		"ModelLoaderMixin",
+		"EffectParticles.CODEParticleForCODEEffect",
+		"EffectParticles.CPV2ParticleForCPV2Effect",
+		"EffectParticles.THEFORCEParticleForTHEFORCEEffect"
 	],
 	"injectors": {
 		"defaultRequire": 1

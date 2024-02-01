@@ -10,11 +10,13 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 import net.prangellplays.endoftime.EndOfTime;
-import net.prangellplays.endoftime.item.EndOfTimeToolMaterials;
-import net.prangellplays.endoftime.item.LightsaberItem;
+import net.prangellplays.endoftime.item.*;
 
 public class EndOfTimeItems {
     public static final Item LIGHTSABER = registerItem("lightsaber", new LightsaberItem(EndOfTimeToolMaterials.LIGHTSABER, 8, -2f, new FabricItemSettings().fireproof().rarity(Rarity.EPIC)));
+    public static final Item BLASTER_RIFLE = registerItem("blaster_rifle", new BlasterRifleItem(new FabricItemSettings().maxDamage(0).maxCount(1).fireproof().rarity(Rarity.EPIC)));
+    public static final Item CPV2 = registerItem("cpv2", new CPV2Item(new FabricItemSettings().maxDamage(0).maxCount(1).fireproof().rarity(Rarity.EPIC)));
+    public static final Item CODE_BLADE = registerItem("code_blade", new CodeBladeItem(EndOfTimeToolMaterials.CODE, 10, 2, new FabricItemSettings().fireproof().rarity(Rarity.EPIC)));
 
         private static void addItemsToBuildingItemGroup(FabricItemGroupEntries entries){
         }
@@ -30,6 +32,9 @@ public class EndOfTimeItems {
         }
         private static void addItemsToCombatItemGroup(FabricItemGroupEntries entries){
             entries.add(LIGHTSABER);
+            entries.add(CPV2);
+            entries.add(CODE_BLADE);
+            entries.add(BLASTER_RIFLE);
         }
         private static void addItemsToFoodItemGroup(FabricItemGroupEntries entries){
         }

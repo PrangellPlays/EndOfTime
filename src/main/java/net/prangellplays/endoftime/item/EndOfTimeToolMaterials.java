@@ -8,7 +8,7 @@ import java.util.function.Supplier;
 
 public enum EndOfTimeToolMaterials implements ToolMaterial {
     LIGHTSABER(5, 0, 6.5f, 3.5f, 26,() -> Ingredient.ofItems(Items.AIR)),
-    CODE(5, 0, 6.5f, 3.5f, 26,() -> Ingredient.ofItems(Items.AIR));
+    CODE(5, 0, 6.5f, 3.0f, 26,() -> Ingredient.ofItems(Items.AIR));
 
     private final int miningLevel;
     private final int itemDurability;

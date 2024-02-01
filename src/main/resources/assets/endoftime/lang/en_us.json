@@ -1,3 +1,10 @@
 {
-  "item.endoftime.lightsaber": "§aLightsaber"
+  "item.endoftime.lightsaber": "§aLightsaber",
+  "item.endoftime.blaster_rifle": "§aBlaster Rifle",
+  "item.endoftime.cpv2": "§2CPV2",
+  "item.endoftime.code_blade": "§2Code Blade",
+
+  "effect.endoftime.cpv2": "§l§2CPV2",
+  "effect.endoftime.code": "§l§2C0D3",
+  "effect.endoftime.the_force": "§l§bThe Force"
 }
