@@ -15,6 +15,7 @@ import net.prangellplays.endoftime.item.*;
 public class EndOfTimeItems {
     public static final Item LIGHTSABER = registerItem("lightsaber", new LightsaberItem(EndOfTimeToolMaterials.LIGHTSABER, 8, -2f, new FabricItemSettings().fireproof().rarity(Rarity.EPIC)));
     public static final Item BLASTER_RIFLE = registerItem("blaster_rifle", new BlasterRifleItem(new FabricItemSettings().maxDamage(0).maxCount(1).fireproof().rarity(Rarity.EPIC)));
+    public static final Item BLASTER_BLAST = registerItem("blaster_blast", new BlasterBlastItem(new FabricItemSettings().maxCount(1).fireproof()));
     public static final Item CPV2 = registerItem("cpv2", new CPV2Item(new FabricItemSettings().maxDamage(0).maxCount(1).fireproof().rarity(Rarity.EPIC)));
     public static final Item CODE_BLADE = registerItem("code_blade", new CodeBladeItem(EndOfTimeToolMaterials.CODE, 10, 2, new FabricItemSettings().fireproof().rarity(Rarity.EPIC)));
 
@@ -39,6 +40,7 @@ public class EndOfTimeItems {
         private static void addItemsToFoodItemGroup(FabricItemGroupEntries entries){
         }
         private static void addItemsToIngredientsItemGroup(FabricItemGroupEntries entries){
+            entries.add(BLASTER_BLAST);
         }
         private static void addItemsToSpawnItemGroup(FabricItemGroupEntries entries){
         }

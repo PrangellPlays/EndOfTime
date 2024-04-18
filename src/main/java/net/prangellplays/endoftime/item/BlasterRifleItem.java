@@ -18,6 +18,8 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.UseAction;
 import net.minecraft.world.World;
+import net.prangellplays.endoftime.entity.projectile.BlasterBlast;
+import net.prangellplays.endoftime.registry.EndOfTimeItems;
 
 import java.util.function.Predicate;
 
@@ -35,10 +37,12 @@ public class BlasterRifleItem extends Item {
 
         if (!world.isClient) {
 
-            ArrowItem itemarrow = (ArrowItem) Items.ARROW;
-            PersistentProjectileEntity persistentProjectileEntity = itemarrow.createArrow(world, new ItemStack(Items.ARROW), player);
-            persistentProjectileEntity.setVelocity(player, player.getPitch(), player.getYaw(), 0.0F, 5.0f, 0.0F);
-            world.spawnEntity(persistentProjectileEntity);
+            BlasterBlastItem blasterBlastItem = (BlasterBlastItem) EndOfTimeItems.BLASTER_BLAST;
+            BlasterBlast blasterBlast = blasterBlastItem.createBlasterBlast(world, new ItemStack(EndOfTimeItems.BLASTER_BLAST), player);
+            blasterBlast.setVelocity(player, player.getPitch(), player.getYaw(), 0.0F, 5.0f, 0.0F);
+            blasterBlast.hasNoGravity();
+            blasterBlast.setNoGravity(true);
+            world.spawnEntity(blasterBlast);
             player.getItemCooldownManager().set(this, 10);
         }
 
